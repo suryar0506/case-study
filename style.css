@@ -1,0 +1,13 @@
+body{
+    background-color: bisque;
+}
+
+.img-responsive{
+    height: 300px;
+    width: 200px;
+    box-shadow: 5px 5px 20px black ;
+}
+
+ol{
+    list-style-type: none;
+}
