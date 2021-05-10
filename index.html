@@ -21,19 +21,23 @@
                 </li>
                 <li>
           <div id = "image_holder">
-              <img src = "hourglass.jpeg" class = "img-responsive">
+              <img onclick = "changeImage()" id = "object_img" src = "Hourglass.jpg" class = "img-responsive">
           </div>
                 </li>
           <br>
                 <li>
+                    <marquee loop = "3000000" behavior = "slide" width="200px" direction="right">Click the Image(twice at first)</marquee>
+                </li>
+           <br>
+                <li>
           <div id = "mobilenet_result_div">
-            <h4>Mobilenet Result: <span id = "mobilenet_result_display"></span></h4>
+            <h4>Mobilenet Result: <span id = "mobilenet_result_display">...</span></h4>
           </div>
                 </li>
           <br>
                 <li>
           <div id = "azure_result_div">
-            <h4>Microsoft Azure Result: <span id = "azure_result_display"></span></h4>
+            <h4>Microsoft Azure Result: <span id = "azure_result_display">Sandglass</span></h4>
           </div>
                 </li>
           <br>
