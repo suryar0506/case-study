@@ -15,14 +15,25 @@ var azure_names = [
 "Vase",
 ];
 
+var mobilenet_name = [
+"Hourglass",
+"Microphone",
+"Cellphone",
+"Ski Mask",
+"Kimono",
+];
+
 var i = 0;
 
 function changeImage(){
     document.getElementById("object_img").src = objects[i];
     document.getElementById("azure_result_display").innerHTML = azure_names[i];
+    document.getElementById("mobilenet_result_display").innerHTML = mobilenet_name[i];
     i++;
     if(i == 5){
         i = 0;
     }
 }
-
+ function final_results(){
+     document.getElementById("final_conclusion_display").innerHTML = "Based on the results of this case study between Microsoft Azure and Mobilenet, I proclaim Azure to be equal to its counterpart due to its score of 2/5 as opposed to Mobilenet's score of 2/5 objects correct."
+ }

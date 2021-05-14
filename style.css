@@ -11,3 +11,13 @@ body{
 ol{
     list-style-type: none;
 }
+
+#final_conclusion_display{
+    font-size: 23px;
+}
+
+marquee{
+    font-size: 20px;
+    color: blue;
+    width: 400px;
+}
