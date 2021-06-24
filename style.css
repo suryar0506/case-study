@@ -1,23 +1,43 @@
-body{
-    background-color: bisque;
-}
 
-.img-responsive{
+#imageDisplay{
     height: 300px;
-    width: 200px;
-    box-shadow: 5px 5px 20px black ;
+    width: 300px;
+    box-shadow: 5px 5px 5px black;
 }
 
-ol{
-    list-style-type: none;
+canvas {
+    margin-top: 1000px;
+    margin-left: -150px;
 }
 
-#final_conclusion_display{
-    font-size: 23px;
+#objects_tested{
+    border: 3px solid black;
+    width: 450px;
+    margin-top: 15px;
 }
 
-marquee{
-    font-size: 20px;
-    color: blue;
-    width: 400px;
+#mobilenet_opinion{
+    border: 3px solid black;
+    width: 350px;
+    margin-right: 1000px;
+    margin-top: -500px;
+    position: sticky;
+}
+
+#googleLens_opinion{
+    border: 3px solid black;
+    width: 350px;     
+    margin-left: 1000px;
+    margin-top: -600px;
+    position: sticky;
+}
+
+#googleLens_logo{
+    width: 350px;
+    height: 500px;
+}
+
+#mobilenet_logo{
+    width: 350px;
+    height: 500px;
 }

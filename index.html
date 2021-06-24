@@ -1,56 +1,59 @@
 <html>
     <head>
-<title>Case Study</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+        <title>Google Lens vs Mobilenet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+      <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body style = "background-color: burlywood;">
         <center>
-            <ol>
-                <li>
-          <h1>Case Study: Mobilenet v.s Microsoft Azure</h1>
-                </li>
-                <li>
-          <div id = "image_holder">
-              <img onclick = "changeImage()" id = "object_img" src = "Hourglass.jpg" class = "img-responsive">
-          </div>
-                </li>
-          <br>
-                <li>
-                    <marquee loop = "3000000" behavior = "slide" width="200px" direction="right">Click the Image(twice at first)</marquee>
-                </li>
-           <br>
-                <li>
-          <div id = "mobilenet_result_div">
-            <h4>Mobilenet Result: <span id = "mobilenet_result_display">...</span></h4>
-          </div>
-                </li>
-          <br>
-                <li>
-          <div id = "azure_result_div">
-            <h4>Microsoft Azure Result: <span id = "azure_result_display">Sandglass</span></h4>
-          </div>
-                </li>
-          <br>
-                <li>
-          <div id = "final_conclusion_div">
-              <h3>Final Conclusion: <span id = "final_conclusion_display"></span></h3>
-          </div>
-                </li>
+                <h1 class = "btn btn-danger" style = "font-size: 23px;">Google lens vs Mobilenet</h1>
+            
+            <br>
+            
+                <h3 class = "btn btn-success" style = "font-size: 23px;">Objects tested: Green Ball | Fork | Paintbrush | Pen | Purple Scissors</h3>
+            
+            
+        <div id = "objects_tested">
+                <div id = "img_display_div">
+                    <img onclick = "imageSlideshow()" style = "width: 300px; height: 300px;" id = "imageDisplay" src = "Ball.jpg">
+                </div>           
+            <br>           
+                <p style = "font-size: 23px;">Click on the image. Scroll down for more fun with mobilenet.</p>
+            <br>
+            <br>
+            <button onclick = "final_conclusion()" class = "btn btn-info">Display Conclusion</button>
+            <br>
+            <br>
+            <button onclick = "empty_of_text()" class = "btn btn-primary">Clear Conclusion</button>
+            <hr>
+                    <p style = "font-size: 23px;" id = "final_conclusion_display"></p>
+            </div>
+
+
+        <div id = "mobilenet_opinion">
+                <img id = "mobilenet_logo" src = "download.png">
+                    <br>
+                    <br>
+                    <h3 style = "font-size: 23px;">My opinion: <span style = "font-size: 23px;" id = "mobilenet_result">Balloon</span></h3>
                 <br>
-                <li>
-                    <button onclick = "final_results()" class = "btn btn-info">Display Results</button>
-                </li>
-            </ol>
+                </div>           
+
+        <div id = "googleLens_opinion">
+            <img id = "googleLens_logo" src = "google_lens.jpeg">
+                    <br>
+                    <br>
+                <h3 style = "font-size: 23px;">My classification: <span style = "font-size: 23px;" id = "googleLens_results">Green Ball</span></h3>
+        <br>
+            </div>
+   
+            <h3 style = "font-size: 23px;">Realtime Mobilenet results: <span style = "font-size: 23px;" id = "realtime_mobilenet_result"></span></h3>
         </center>
         <script src = "main.js"></script>
     </body>
